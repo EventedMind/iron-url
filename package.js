@@ -1,6 +1,7 @@
 Package.describe({
+  name: "iron:url",
   summary: "Url utilities and support for compiling a url into a regular expression.",
-  version: "1.0.6",
+  version: "1.0.7",
   git: "https://github.com/eventedmind/iron-url"
 });
 
