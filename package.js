@@ -1,22 +1,23 @@
 Package.describe({
   summary: "Url utilities and support for compiling a url into a regular expression.",
-  version: "1.0.7",
+  version: "1.0.8",
+  name: "iron:url",
   git: "https://github.com/eventedmind/iron-url"
 });
 
-Package.on_use(function (api) {
+Package.onUse(function (api) {
   api.use('underscore@1.0.0');
 
   api.use('iron:core@1.0.7');
   api.imply('iron:core');
 
-  api.add_files('lib/compiler.js');
-  api.add_files('lib/url.js');
+  api.addFiles('lib/compiler.js');
+  api.addFiles('lib/url.js');
 });
 
-Package.on_test(function (api) {
+Package.onTest(function (api) {
   api.use('iron:url');
   api.use('tinytest');
   api.use('test-helpers');
-  api.add_files('test/url_test.js', ['client', 'server']);
+  api.addFiles('test/url_test.js');
 });
